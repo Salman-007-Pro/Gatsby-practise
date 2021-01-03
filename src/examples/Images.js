@@ -9,7 +9,7 @@ const getImage = graphql`
   {
     fixed: file(relativePath: { eq: "image-2.jpg" }) {
       childImageSharp {
-        fixed(width: 300, height: 400) {
+        fixed(width: 400, height: 400, grayscale: true) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -17,7 +17,7 @@ const getImage = graphql`
     fluid: file(relativePath: { eq: "image-3.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -35,10 +35,12 @@ const Images = () => {
 
       <article className="single-image">
         <h3>fixed image/blur</h3>
+        <Image fixed={data.fixed.childImageSharp.fixed} />
       </article>
 
       <article className="single-image">
         <h3>fluid image/svg</h3>
+        <Image fluid={data.fluid.childImageSharp.fluid} />
       </article>
     </section>
   )
