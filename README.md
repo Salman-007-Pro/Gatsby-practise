@@ -15,7 +15,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 ## 🚀 Quick start
 
 **Live Site**
-url:https://gatsby-practise-2020.netlify.app/products/
+url: [a link](https://gatsby-practise-2020.netlify.app/)
 
 1.  **Create a Gatsby site.**
 
