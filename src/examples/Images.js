@@ -32,7 +32,6 @@ const getImage = graphql`
 `
 const Images = () => {
   const data = useStaticQuery(getImage)
-  console.log(data)
   return (
     <section className="images">
       <article className="single-image">
