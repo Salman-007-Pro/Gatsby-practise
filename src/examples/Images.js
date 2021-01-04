@@ -21,6 +21,13 @@ const getImage = graphql`
         }
       }
     }
+    example: file(relativePath: { eq: "image-3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
   }
 `
 const Images = () => {
